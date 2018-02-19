@@ -1,6 +1,7 @@
 n=input("Parakalw Dwste to plithws twn psifiwn: ")
 s=input("Parakalw dwste kai to athroisma twn psifiwn: ")
 pin=[]
+pinakas=[]
 a=0
 pint=[]
 for i in range(n):
@@ -15,12 +16,15 @@ for b in range(b,megar+1):
     p=0
     k=1
     for j in range(n-1):
-        if alist[j]>alist[j+1]:
+        if alist[j]<=alist[j+1]:
             k=k+1
         if k==n:
             for i in range(len(alist)):
                 p=p+alist[i]
     if p==s:
+        pinakas.append(b)
         t=t+1
 print  t
-
+print "Kai oi arithmoi autoi einai: "
+for i in pinakas:
+    print i
